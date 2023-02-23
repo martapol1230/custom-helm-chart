@@ -1,6 +1,6 @@
 module "vault_secrets" {
   source = "../modules/vault-secrets"
-  google_domain_name = "awssidar.com"
+  google_domain_name = "clouddomaincard.com"
   mysql_database = "artemis"
   mysql_user = "artemis"
   policy_name = "k8s_policy"
