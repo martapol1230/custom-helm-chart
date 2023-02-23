@@ -12,8 +12,8 @@ module "artemis" {
   wait      = false
   values = <<EOF
 controller:
-  image: "docker.awssidar.com/artemis
-  tag: "2.0.0"
+  image: "docker.pkg.dev/terraform-project-marta/artemis/artemis"
+  tag: "9fb25115355fc2c804fd92fb4ce3802a3a30277c"
   
   ingress:
   enabled: true
@@ -21,13 +21,13 @@ controller:
   annotations: 
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-    - host: application.awssidar.com
+    - host: application.clouddomaincard.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls: 
    - secretName: artemis
      hosts:
-       - "application.awssidar.com"
+       - "application.clouddomaincard.com"
 EOF
 }
